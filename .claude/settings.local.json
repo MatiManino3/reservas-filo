@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes --name=\"filo-barberia\")",
+      "Bash(npx create-next-app@latest filo-temp --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(cp -r filo-temp/app .)",
+      "Bash(cp -r filo-temp/public .)",
+      "Bash(cp -r filo-temp/node_modules .)",
+      "Bash(cp filo-temp/package.json .)",
+      "Bash(cp filo-temp/package-lock.json .)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000)"
+    ]
+  }
+}
