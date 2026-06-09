@@ -1,41 +1,35 @@
-# FILO · Barbería — Sistema de reservas
+FILO · App de Reservas para Barbería
 
-## El problema
-Las barberías y negocios de servicios gestionan turnos por WhatsApp y cuaderno: doble reserva, horas perdidas respondiendo mensajes y clientes frustrados cuando el horario ya está ocupado.
+App de reservas mobile-first para negocios de servicios — barberías, peluquerías, estudios. El cliente reserva su turno en menos de un minuto y el dueño ve la agenda del día de un vistazo.
 
-## La solución
-App web de reservas self-service: el cliente elige servicio, día y horario en 3 pasos desde el celular. El negocio ve su agenda del día en tiempo real, ordenada por hora, con nombre, servicio, teléfono y precio.
+🔗 Demo en vivo: https://reservas-filo.vercel.app
+🛠️ Hecho con: Next.js · TypeScript · Tailwind CSS
 
-## Stack
-| Capa | Tecnología |
-|------|-----------|
-| Framework | Next.js 15 (App Router) |
-| Lenguaje | TypeScript |
-| Estilos | Tailwind CSS |
-| Fuentes | next/font/google — Fraunces (display) + Manrope (body) |
-| Estado | React Context (mock en memoria) |
-| Iconos | lucide-react |
-| Deploy | Vercel |
+El problema
+Muchos negocios de servicios todavía manejan los turnos por WhatsApp y cuaderno. Eso significa turnos duplicados, mensajes que se pierden y tiempo perdido confirmando cada horario a mano.
+La solución
+Un flujo de reserva self-service combinado con una vista de agenda en tiempo real:
 
-## Rutas
-| Ruta | Descripción |
-|------|-------------|
-| `/` | Landing — presentación del negocio y acceso rápido a reservar |
-| `/reservar` | Flujo de turno del cliente (servicio → día → hora → datos → confirmación) |
-| `/agenda` | Vista del negocio — turnos del día ordenados por hora |
+El cliente elige servicio, día y horario, deja sus datos de contacto y confirma — todo en menos de un minuto.
+Los horarios ya reservados se bloquean automáticamente, así no hay turnos duplicados.
+El dueño tiene una vista Agenda clara con los turnos del día ordenados por hora.
 
-## Correr en local
+Características
 
-```bash
+Flujo de reserva guiado — servicio → día → horario → datos → confirmación, con un resumen que se actualiza en vivo.
+Disponibilidad inteligente — los horarios ocupados se deshabilitan en tiempo real.
+Agenda del negocio — el día completo con cliente, servicio, precio y contacto.
+Totalmente responsive — pensada mobile-first, porque la mayoría reserva desde el celular.
+
+Tecnologías
+FrameworkNext.js (App Router)LenguajeTypeScriptEstilosTailwind CSSTipografíaFraunces (títulos) + Manrope (texto)DeployVercel
+Correr en local
+bashgit clone https://github.com/MatiManino3/reservas-filo.git
+cd reservas-filo
 npm install
 npm run dev
-```
+Después abrí http://localhost:3000
+Notas
+Proyecto propio / demo, hecho para mostrar trabajo de frontend y producto. FILO es una marca ficticia y todos los datos de turnos son de demostración.
 
-Abrí [http://localhost:3000](http://localhost:3000).
-
-## Deploy en Vercel
-
-https://reservas-filo.vercel.app/
-
-## Datos de demostración
-La app arranca con 4 reservas seed en memoria. Al recargar la página, el estado vuelve al inicial (comportamiento esperado hasta integrar la base de datos).
+Hecho por Matías Manino — @MatiManino3
